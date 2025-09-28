@@ -43,3 +43,42 @@ A aplicação busca taxas de câmbio em tempo real e realiza a conversão de for
 ```bash
 git clone https://github.com/gabrielhcastro/Conversor-De-Moedas.git
 cd Conversor-De-Moedas
+```
+### 2. Configure o Backend
+#### a. Crie um Ambiente Virtual (Recomendado)
+```bash
+# Para Windows
+python -m venv venv
+venv\Scripts\activate
+
+# Para macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+```
+#### b. Instale as Dependências Python
+Crie um arquivo chamado `requirements.txt` na raiz do projeto com o seguinte conteúdo:
+```bash
+Flask
+Flask-Cors
+requests
+```
+Em seguida, instale as dependências:
+```bash
+pip install -r requirements.txt
+```
+#### c. Obtenha sua Chave de API
+1. Vá para [ExchangeRate-API](https://www.exchangerate-api.com) e crie uma conta gratuita para obter sua chave.
+2. Abra o arquivo `app.py` e insira sua chave na variável `API_KEY`:
+```bash
+# Em app.py
+API_KEY = "SUA_CHAVE_AQUI"
+```
+### 3. Inicie a Aplicação
+#### a. Inicie o Servidor Backend
+No seu terminal, na pasta do projeto, execute:
+```bash
+python app.py
+```
+O servidor começará a rodar em `http://127.0.0.1:5000`. Deixe este terminal aberto.
+#### b. Abra o Frontend
+Simplesmente abra o arquivo `index.html` no seu navegador.
